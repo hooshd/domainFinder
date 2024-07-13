@@ -4,6 +4,8 @@ Domain Finder is a Python script that generates brand names based on a given the
 
 I made this because I was sick of having to think of company names and then check individual availability of .com domains.
 
+It works by calling the Anthropic API and then checking against whois.
+
 ## Features
 
 - Generate brand names using the Anthropic API
@@ -58,19 +60,17 @@ domainFinder/
 - `check_domain_availability(domain)`: Checks if a given domain is available for registration.
 - `main(theme, prefix=None, postfix=None, num_brands=100)`: Orchestrates the entire process.
 
-## Potential Improvements
+## Future Improvements
 
-- Implement rate limiting handling for API calls
-- Enhance error handling
-- Optimize performance with parallel processing
-- Develop a graphical user interface
-- Implement additional domain name validation
-- Use a database for better data management
-- Add more customization options for brand name generation
+- GUI
+- More creativity
+- Links to domain name providers
+- better database
+- More customization options for brand name generation
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a pull request.
 
 ## License
 
