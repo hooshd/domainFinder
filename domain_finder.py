@@ -20,9 +20,11 @@ Theme: {theme}
 Prefix (optional): {prefix if prefix else 'N/A'}
 Postfix (optional): {postfix if postfix else 'N/A'}
 
-Your goal is to generate brand names that have a timeless, iconic feeling, and aligning with the given theme.
+Your goal is to generate branded domain names that have a timeless, iconic feeling, and aligning with the given theme.
 
-Guidelines for creating brand names:
+Each name must be a single concatenated name without the domain suffix.
+
+Guidelines for creating branded domain names:
 1. If a prefix is provided, start each name with it.
 2. If a postfix is provided, end each name with it.
 3. Create two types of brand names, based on one word (Word), or an adjective + one word (AdjectiveWord)
