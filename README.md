@@ -1,4 +1,3 @@
-markdown
 # Domain Finder Utility
 
 ## Description
