@@ -1,77 +1,73 @@
-# Domain Finder
+markdown
+# Domain Finder Utility
 
-Domain Finder is a Python script that generates brand names based on a given theme and checks their availability as domain names.
+## Description
+The Domain Finder Utility is a Python script designed to help developers identify unavailable domain names. It checks a list of potential domain names against a predefined set of unavailable domains and provides feedback on which domains are still available for registration. This tool is particularly useful for developers and businesses looking to secure a unique online presence.
 
-I made this because I was sick of having to think of company names and then check individual availability of .com domains.
+## File Tree Structure
 
-It works by calling the Anthropic API and then checking against whois.
+- README.md                # Documentation for the repository
+- unavailable_domains.txt   # A text file containing a list of unavailable domain names
+- domain_finder.py         # The main Python script that implements the domain checking functionality
 
-## Features
 
-- Generate brand names using the Anthropic API
-- Check domain availability
-- Customizable with optional prefix and postfix
-- Outputs lists of available and unavailable domain names
+## Features and Benefits
+- **Domain Availability Check**: Quickly checks if a domain is available for registration.
+- **Customizable**: Easily modify the list of unavailable domains.
+- **User-Friendly**: Simple command-line interface for ease of use.
+
+## Prerequisites
+- **Python**: Ensure you have Python 3.x installed on your machine.
+- **Dependencies**: No external libraries are required for this utility.
+- **Environment Variables**: No specific environment variables are needed.
+- **Environment Setup**: Ensure your Python environment is set up correctly.
 
 ## Installation
-
-1. Ensure you have Python installed on your system.
-2. Clone this repository:
-   ```
+1. Clone the repository:
+   bash
    git clone https://github.com/yourusername/domain-finder.git
    cd domain-finder
-   ```
-3. Install the required libraries:
-   ```
-   pip install anthropic whois python-dotenv termcolor
-   ```
-4. Set up an Anthropic API key and add it to a `.env` file in the project root:
-   ```
-   ANTHROPIC_API_KEY=your_api_key_here
-   ```
+   
+
+2. Ensure you have Python installed. You can check this by running:
+   bash
+   python --version
+   
 
 ## Usage
+### Input Parameters
+- The script reads from `unavailable_domains.txt`, which should contain one domain name per line.
 
-Run the script from the command line:
+### Expected Output
+- The script will output a list of available domain names based on the input provided.
 
-```
-python domain_finder.py "your theme" --prefix optional_prefix --postfix optional_postfix --num_brands 100
-```
+### Test Data
+- Example contents of `unavailable_domains.txt`:
+  
+  example.com
+  testsite.org
+  mywebsite.net
+  
 
-## File Structure
+### Code Examples
+To run the domain finder, execute the following command in your terminal:
+bash
+python domain_finder.py
 
-```
-domainFinder/
-├── domain_finder.py         # Main script for generating and checking domains
-├── available_domains.txt    # List of available domain names
-└── unavailable.txt          # List of unavailable domain names
-```
+The output will display available domains that are not listed in `unavailable_domains.txt`.
 
-## How It Works
-
-1. The script generates brand names based on the given theme using the Anthropic API.
-2. It then checks the availability of each generated domain name.
-3. Available and unavailable domain names are written to separate text files.
-
-## Functions
-
-- `generate_brand_names(theme, prefix=None, postfix=None, num_brands=100)`: Generates brand names using the Anthropic API.
-- `read_existing_domains(filename)`: Reads existing domain names from a file to avoid rechecking.
-- `check_domain_availability(domain)`: Checks if a given domain is available for registration.
-- `main(theme, prefix=None, postfix=None, num_brands=100)`: Orchestrates the entire process.
-
-## Future Improvements
-
-- GUI
-- More creativity
-- Links to domain name providers
-- better database
-- More customization options for brand name generation
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request.
+## Contributing to the Repository
+We welcome contributions! Please fork the repository and submit a pull request with your changes. Ensure that your code adheres to the existing style and includes appropriate tests.
 
 ## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-MIT public license
+## Acknowledgements
+Thanks to the open-source community for their contributions and support.
+
+## Author
+This project is a product of [Lumic.ai](https://lumic.ai).
+
+---
+
+Thanks for reading this far! Why do programmers prefer dark mode? Because light attracts bugs!
